@@ -25,3 +25,14 @@ export interface Transaction {
   idempotency_key: string;
   created_at: Date;
 }
+
+export interface LedgerEntry {
+  id: string;
+  tenant_id: string;
+  transaction_id: string;
+  wallet_id: string;
+  entry_type: "DEBIT" | "CREDIT";
+  amount: string;
+  balance_after: string;
+  created_at: Date;
+}
